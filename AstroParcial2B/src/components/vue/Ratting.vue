@@ -3,34 +3,12 @@ import { ref } from 'vue'
 
 var cont = ref(0)
 var words = ref('')
+var large = ref(0)
 
-function build() {
-    var large = words.value.split(' ')
-    cont.value = large.length
-}
+large = words.value.split(' ')
 
-function showColor1() {
-    if (cont.value>0 && cont.value>=2) {
-        return true
-    }
-}
-
-function showColor2() {
-    if (cont.value>2 && cont.value>=4) {
-        return true
-    }
-}
-
-function showColor3() {
-    if (cont.value>4 && cont.value>=6) {
-        return true
-    }
-}
-
-function showColor4() {
-    if (cont.value>6) {
-        return true
-    }
+for (let index = 0; index < large.length; index++) {
+    cont ++
 }
 
 
